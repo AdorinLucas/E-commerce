@@ -19,6 +19,7 @@ public class OrderDetail {
 	Date orderDate;
 	double totalShoppingAmount;
 	String pmode;
+	String S_add;
 
 	public int getOrderId() {
 		return orderId;
@@ -59,5 +60,12 @@ public class OrderDetail {
 	public void setPmode(String pmode) {
 		this.pmode = pmode;
 	}
+    
+	public String getS_add() {
+		return S_add;
+	}
 
+	public void setS_add(String S_add) {
+		this.S_add = S_add;
+	}
 }

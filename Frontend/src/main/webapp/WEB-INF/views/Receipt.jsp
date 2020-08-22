@@ -11,7 +11,11 @@
     			<div class="col-xs-6">
     				<address>
     				<strong>Billed To:</strong><br>
-    					${address}
+    				    <h4><strong>Customer Name:</strong>${customerName}</h4>
+    					<h4><strong>Customer Address</strong></h4>
+    					<h4>${address1}</h4>
+    					<h4>${address2}</h4>
+    				    <h4>${pincode}</h4>
     				</address>
     			</div>
     			<div class="col-xs-6 text-right">

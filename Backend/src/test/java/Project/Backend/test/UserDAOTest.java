@@ -29,7 +29,9 @@ static UserDAO userDAO;
 		
 		user.setUsername("Teddy");
 		user.setCustomerName("Teddy");
-		user.setAddress("Chennai");
+		user.setAddress1("G3, D Block, RC Adena Appartments");
+		user.setAddress2("Thirumullaivoyal, Chennai");
+		user.setPincode("600062");
 		user.setEmailId("Teddy22@gmail.com");
 		user.setEnabled(true);
 		user.setMobileNo("987654321");
@@ -45,9 +47,11 @@ static UserDAO userDAO;
 	{
 		UserDetail user=new UserDetail();
 		
-		user.setUsername("Teddy");
+		user.setUsername("Teddy123");
 		user.setCustomerName("Teddy");
-		user.setAddress("Bangalore");
+		user.setAddress1("Door no 223, ABC appartments");
+		user.setAddress2("Bengaluru");
+		user.setPincode("12345");
 		user.setEmailId("Teddy22@gmail.com");
 		user.setEnabled(true);
 		user.setMobileNo("987654321");

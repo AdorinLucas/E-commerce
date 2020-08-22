@@ -38,13 +38,17 @@ public class PaymentController {
 		
 		m.addAttribute("total_Amount", this.totalCartValue(cartItemList));
 		
-		m.addAttribute("address", userDAO.getUser(username).getAddress());
+		m.addAttribute("address1", userDAO.getUser(username).getAddress1());
+		
+		m.addAttribute("address2", userDAO.getUser(username).getAddress2());
+		
+		m.addAttribute("pincode", userDAO.getUser(username).getPincode());
 		
 		return "Payment";
 	}
 	
 	@RequestMapping(value="/receipt",method=RequestMethod.POST)
-	public String generateReceipt(Model m, HttpSession session,@RequestParam("pmode")String pmode)
+	public String generateReceipt(Model m, HttpSession session,@RequestParam("pmode")String pmode,@RequestParam("S_add")String S_add)
 	{
 		String username=(String)session.getAttribute("username");
 		
@@ -54,13 +58,17 @@ public class PaymentController {
 		double total_Amount=this.totalCartValue(cartItemList);
 		
 		m.addAttribute("total_Amount",total_Amount);
-		m.addAttribute("address", userDAO.getUser(username).getAddress());
+		m.addAttribute("customerName", userDAO.getUser(username).getCustomerName());
+		m.addAttribute("address1", userDAO.getUser(username).getAddress1());
+		m.addAttribute("address2", userDAO.getUser(username).getAddress2());
+		m.addAttribute("pincode", userDAO.getUser(username).getPincode());
 		
 		OrderDetail orderDetail=new OrderDetail();
 		orderDetail.setTotalShoppingAmount(total_Amount);
 		orderDetail.setUsername(username);
 		orderDetail.setOrderDate(new java.util.Date());
 		orderDetail.setPmode(pmode);
+		orderDetail.setS_add(S_add);
 		
 		if(orderDAO.payment(orderDetail))
 		{
@@ -68,7 +76,10 @@ public class PaymentController {
 		}
 		
 		m.addAttribute("order", orderDetail);
-		m.addAttribute("address", userDAO.getUser(username).getAddress());
+		m.addAttribute("customerName", userDAO.getUser(username).getCustomerName());
+		m.addAttribute("address1", userDAO.getUser(username).getAddress1());
+		m.addAttribute("address2", userDAO.getUser(username).getAddress2());
+		m.addAttribute("pincode", userDAO.getUser(username).getPincode());
 		
 		return "Receipt";
 	}

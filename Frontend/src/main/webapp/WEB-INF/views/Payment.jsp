@@ -148,7 +148,7 @@ body {
               <div class="form-label-group">
                 <input type="radio" name="pmode" value="COD"/>Cash on Delivery
 				<input type="radio" name="pmode" value="CC"/>Credit Card
-				<input type="radio" name="pmode" value="CC"/>Credit Card
+				<input type="radio" name="pmode" value="DC"/>Debit Card
 			  </div>
               
               <div class="form-label-group">
@@ -166,13 +166,17 @@ body {
                 <label for="name">Name</label>
               </div>
               
+              <div class="form-label-group">
+              <h5>Is the Shipping address same as the customer Address</h5>
+                <input type="radio" name="S_add" value="Y"/>Yes
+				<input type="radio" name="S_add" value="N"/>No
+				
+			  </div>
               
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Pay and Checkout</button>
               </form>
               </div>
-              <div style="background-color:silver">
-	          <h5><b><center>Shipping Address : ${address}</center></b></h5>
-	          </div>
+              
           
         </div>
       </div>

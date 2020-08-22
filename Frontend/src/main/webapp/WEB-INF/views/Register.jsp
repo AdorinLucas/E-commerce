@@ -159,8 +159,18 @@ body {
               </div>
               
                <div class="form-label-group">
-                <input type="text" id="address" class="form-control" name="Address" placeholder="Address" required autofocus>
-                <label for="address">Enter Address</label>
+                <input type="text" id="address1" class="form-control" name="Address_Line1" placeholder="Address_Line1" required autofocus>
+                <label for="address1">Enter Address Line 1</label>
+              </div>
+              
+              <div class="form-label-group">
+                <input type="text" id="address2" class="form-control" name="Address_Line2" placeholder="Address_Line2" required autofocus>
+                <label for="address2">Enter Address Line 2</label>
+              </div>
+              
+              <div class="form-label-group">
+                <input type="text" id="pincode" class="form-control" name="Pincode" placeholder="Pincode" required autofocus>
+                <label for="Pincode">Enter Pincode</label>
               </div>
               
               <div class="form-label-group">

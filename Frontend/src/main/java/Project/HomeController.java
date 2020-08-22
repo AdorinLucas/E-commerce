@@ -52,15 +52,21 @@ public class HomeController {
 	
 	@RequestMapping(value="/signup",method=RequestMethod.POST)
 	public String registeruser(@RequestParam("Customer name")String cname,
-			@RequestParam("Email Id")String email,@RequestParam("Mobile number")String mobile ,
-			@RequestParam("Address")String address,@RequestParam("Username")String uname,
+			@RequestParam("Email Id")String email,
+			@RequestParam("Mobile number")String mobile ,
+			@RequestParam("Address_Line1")String address1,
+			@RequestParam("Address_Line2")String address2,
+			@RequestParam("Pincode")String pincode,
+			@RequestParam("Username")String uname,
 			@RequestParam("Password")String pword,Model m)
 	{
 UserDetail user=new UserDetail();
 		
 		user.setUsername(uname);
 		user.setCustomerName(cname);
-		user.setAddress(address);
+		user.setAddress1(address1);
+		user.setAddress2(address2);
+		user.setPincode(pincode);
 		user.setEmailId(email);
 		user.setEnabled(true);
 		user.setMobileNo(mobile);

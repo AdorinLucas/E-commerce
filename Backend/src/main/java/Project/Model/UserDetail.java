@@ -11,7 +11,9 @@ public class UserDetail {
 	String username;
 	String password;
     String customerName;
-	String address;
+	String address1;
+	String address2;
+	String pincode;
 	String emailId;
 	String mobileNo;
 	String role;
@@ -41,13 +43,30 @@ public class UserDetail {
 		this.customerName = customerName;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getAddress1() {
+		return address1;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setAddress1(String address1) {
+		this.address1 = address1;
 	}
+	
+	public String getAddress2() {
+		return address2;
+	}
+
+	public void setAddress2(String address2) {
+		this.address2 = address2;
+	}
+	
+	public String getPincode() {
+		return pincode;
+	}
+
+	public void setPincode(String pincode) {
+		this.pincode = pincode;
+	}
+
 
 	public String getEmailId() {
 		return emailId;
